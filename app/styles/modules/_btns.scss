@@ -1,0 +1,69 @@
+/*
+Button component
+*/
+
+.btn {
+	border-width: $border-width;
+}
+
+// Prevent quad borders when buttons are next to each other
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -$border-width;
+  }
+}
+
+.btn-group-vertical {
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group {
+    margin-top: -$border-width;
+  }
+}
+
+.btn-secondary {
+	@include button-variant(white, $brand-secondary, $brand-secondary);
+}
+
+.btn-default-o {
+	@include button-variant-o(white, transparent, white);
+  color: white !important;
+  border-color: white !important;
+}
+
+.btn-primary-o {
+	@include button-variant-o($brand-primary, transparent, $brand-primary);
+}
+
+.btn-secondary-o {
+	@include button-variant-o($brand-secondary, transparent, $brand-secondary);
+}
+
+.btn-success-o {
+	@include button-variant-o($brand-success, transparent, $brand-success);
+}
+
+.btn-danger-o {
+	@include button-variant-o($brand-danger, transparent, $brand-danger);
+}
+
+.btn-warning-o {
+	@include button-variant-o($brand-warning, transparent, $brand-warning);
+}
+
+.btn-info-o {
+	@include button-variant-o($brand-info, transparent, $brand-info);
+}
+
+
+.btn-lg {
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+
+  @media (min-width: $screen-md-min) {
+    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+  }
+}

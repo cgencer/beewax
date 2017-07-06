@@ -1,0 +1,67 @@
+// mixins
+
+@mixin button-variant-o($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: darken($color, 18%);
+    border-color: darken($border, 18%);
+    background-color: rgba(lighten($border, 48%), .48);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: lighten($color, 12%);
+      border-color: lighten($border, 12%);
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+@mixin box-model-spacing-creator($property, $name, $value) {
+  .#{$name} { #{$property}: $value;}
+}
+
+@mixin box-model-spacing-creator {
+  @each $box-model-item in $box-model-array {
+    .#{nth($box-model-item, 2)} { #{nth($box-model-item, 1)}: nth($box-model-item, 3);}
+  }
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

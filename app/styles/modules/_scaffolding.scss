@@ -1,0 +1,27 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+html,
+body {
+	height: 100%;
+}
+body {
+	position: relative;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+a, button {
+	@include transition(all ease-in-out .4s);
+}
+
+label {
+	font-weight: normal;
+}
+
+hr {
+	border-width: $border-width;
+}

@@ -1,0 +1,136 @@
+/*
+content
+  - Modals
+  - Dropdown
+  - Tabs
+  - pills
+  - labels
+  - carousel
+*/
+
+.modal {
+	&.fade .modal-dialog {
+
+		@extend .bounceInUp;
+		@extend .animated;
+	}
+}
+
+.modal-content {
+	@include box-shadow(none);
+}
+
+// Dropdowns
+.dropdown-menu {
+	@include box-shadow(none);
+	border: $border-width solid $dropdown-fallback-border; // IE8 fallback
+	border: $border-width solid $dropdown-border;
+}
+
+// Deviders
+.dropdown-menu .divider, .divider {
+	height: $border-width;
+}
+
+// Tabs
+.nav-tabs {
+  border-bottom-width: $border-width;
+  > li {
+    margin-bottom: -$border-width;
+
+    > a {
+      margin-right: ($border-width * 2);
+      border-width: $border-width;
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-width: $border-width;
+      }
+    }
+  }
+}
+
+
+// Pills
+.nav-pills {
+  > li {
+    + li {
+      margin-left: ($border-width * 2);
+    }
+  }
+}
+
+
+// Stacked pills
+.nav-stacked {
+  > li {
+    + li {
+      margin-top: ($border-width * 2);
+    }
+  }
+}
+
+
+.nav-tabs-justified {
+
+  > li > a {
+    border-radius: $border-radius-base;
+  }
+
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus {
+    border-width: $border-width;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > li > a {
+      border-bottom-width: $border-width;
+    }
+  }
+}
+
+.nav-tabs .dropdown-menu {
+  margin-top: -$border-width;
+}
+
+.label {
+  font-weight: $btn-font-weight;
+  border-radius: $border-radius-base;
+}
+
+// carousel
+.carousel
+{
+  .item {
+    overflow: hidden;
+
+    &.active {
+      overflow: hidden;
+    }
+  }
+}
+.carousel-control {
+  color: $gray-darker;
+  @include text-shadow(none);
+  background: transparent !important;
+  z-index: 600;
+  width: 32px;
+  height: 38px;
+  margin: auto;
+
+  &.left {
+    left: 12px;
+  }
+  &.right {
+    right: 12px;
+  }
+
+  &:hover {
+    color: $brand-primary;
+  }
+}

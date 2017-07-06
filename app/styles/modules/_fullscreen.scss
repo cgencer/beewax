@@ -1,0 +1,69 @@
+/*
+content
+  - fullscreen background image
+  - fullscreen background video
+*/
+
+.section-full-height {
+	@extend %full-screen-table;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.section-half-height {
+	width: 100%;
+	height: 50%;
+	min-height: 50%;
+	display: table;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.section-video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    video {
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	min-width: 100%;
+    	min-height: 100%;
+    	@include translate(-50%,-50%);
+    	z-index: -1;
+    	@include opacity(.72);
+    	background: $brand-secondary;
+    }
+}
+
+
+
+.full-height-bg-fixed {
+	background-attachment: fixed;
+}
+
+@media (min-width: $screen-md-min) {
+	.section-iPhone {
+		position: relative;
+		overflow: visible;
+		.middle {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -85px;
+		}
+		.device {
+
+		}
+	}
+}

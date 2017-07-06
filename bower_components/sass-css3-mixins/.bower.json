@@ -1,0 +1,19 @@
+{
+  "name": "sass-css3-mixins",
+  "main": "css3-mixins.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/matthieua/sass-css3-mixins",
+  "_release": "2b83f4a4cf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2b83f4a4cf78607f088d4a24f0ed93950ed58529"
+  },
+  "_source": "git://github.com/matthieua/sass-css3-mixins.git",
+  "_target": "*",
+  "_originalSource": "sass-css3-mixins"
+}

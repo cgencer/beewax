@@ -1,0 +1,14 @@
+{
+  "name": "mobile-boilerplate",
+  "homepage": "https://github.com/h5bp/mobile-boilerplate",
+  "version": "4.1.2",
+  "_release": "4.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.1.2",
+    "commit": "15bb044a14b184fb9ac825a8994fd17e537d0885"
+  },
+  "_source": "https://github.com/h5bp/mobile-boilerplate.git",
+  "_target": "~4.1.2",
+  "_originalSource": "https://github.com/h5bp/mobile-boilerplate.git"
+}

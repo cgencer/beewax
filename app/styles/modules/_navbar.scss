@@ -1,0 +1,31 @@
+.navbar {
+	border: none;
+	margin-bottom: 0;
+}
+
+.navbar-fixed-top {
+	+ div, + section {
+		padding-top: $navbar-height;
+	}
+}
+
+.navbar-nav {
+	.btn {
+		display: block;
+	}
+}
+
+.navbar-transparent {
+	background: transparent;
+}
+
+@media (min-width: $grid-float-breakpoint) {
+	.navbar-nav {
+		> li {
+			margin-right: $base-spacing-lg;
+		}
+		.btn {
+			display: inline-block;
+		}
+	}
+}
